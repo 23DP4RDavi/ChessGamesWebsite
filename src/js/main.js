@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const heroSection = document.getElementById("hero");
-    const chessPieces = ["pawn.png", "knight.png", "bishop.png", "rook.png", "queen.png", "king.png"];
+    const chessPieces = ["pawn.png", "knight.png", "bishop.png", "rook.png", "queen.png", "king.png","bpawn.png", "bknight.png", "bbishop.png", "brook.png", "bqueen.png", "bking.png"];
 
     function createFallingPiece() {
         const piece = document.createElement("img");
