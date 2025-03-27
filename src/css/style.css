@@ -22,7 +22,7 @@ header h1 {
 header #logo {
     height: 55px;
     width: auto;
-    padding-left: 50px;
+    padding-left: 5%;
 }
 
 nav ul {
