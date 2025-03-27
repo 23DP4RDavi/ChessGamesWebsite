@@ -12,7 +12,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 header h1 {
@@ -23,7 +24,7 @@ header h1 {
 header #logo {
     height: 55px;
     width: auto;
-    padding-left: 5%;
+    order: -1;
 }
 
 nav ul {
@@ -32,11 +33,13 @@ nav ul {
     margin: 0;
     display: flex;
     font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 }
 
 nav ul li {
     margin-left: 16px;
-    padding-right: 50px;
 }
 
 nav ul li a {
