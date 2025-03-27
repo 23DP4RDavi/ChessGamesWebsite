@@ -51,6 +51,7 @@ nav ul li a {
     height: 750px;
     display: grid;
     position: relative;
+    overflow: hidden;
 }
 
 #hero div {
@@ -68,6 +69,28 @@ nav ul li a {
     right: 15%;
     width: 70%;
     height: 40%;
+    z-index: 10;
+}
+
+#hero .falling-piece {
+    position: absolute;
+    top: -50px;
+    width: 200px;
+    height: auto;
+    pointer-events: none;
+    animation: fall linear;
+    animation-duration: 5s;
+    transform-origin: center;
+    z-index: 1;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
 }
 
 #hero h2 {
