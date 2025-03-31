@@ -8,20 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
         piece.classList.add("falling-piece");
 
         piece.style.left = Math.random() * 100 + "vw";
-
         piece.style.animationDuration = Math.random() * 3 + 2 + "s";
-
         const horizontalMovement = Math.random() * 200 - 100;
         piece.style.setProperty("--horizontal-movement", `${horizontalMovement}px`);
-
         piece.style.transform = `rotate(${Math.random() * 360}deg)`;
-
         heroSection.appendChild(piece);
 
         piece.addEventListener("animationend", () => {
             piece.remove();
         });
     }
-
     setInterval(createFallingPiece, 500);
 });
