@@ -55,7 +55,7 @@ nav ul li a {
 }
 
 .header-spacer {
-    height: 85px;
+    height: px;
 }
 
 #hero {
@@ -63,11 +63,12 @@ nav ul li a {
     background-size: 300px 300px;
     background-repeat: repeat;
     background-position: top left;
-    height: 750px;
+    height: 830px;
     display: grid;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    margin-top: 90px;
 }
 
 #hero div {
@@ -128,10 +129,75 @@ nav ul li a {
     border-radius: 10px;
 }
 
-footer {
-    background-color: #303030;
-    padding: 16px;
+section {
+    padding: 50px 20px;
     text-align: center;
+    color: #ffffff;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #d0d0d0;
+}
+
+section a.btn {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#home {
+    background-image: url("https://media.tenor.com/b4_NHV0bA-kAAAAe/sus-among-us.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about {
+    background-image: url("https://media.tenor.com/FnQS6TtmU-EAAAAM/among-us-sus.gif");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#download {
+    background-image: url("https://i.imgflip.com/6tacwp.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    background-color: #202020;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    color: #a0a0a0;
 }
 
 #logo {
