@@ -1,12 +1,18 @@
-body {
-    background-color: #303030;
-    color: #ffffff;
-    font-family: 'Comic Sans MS', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
+body {
+    background-color: #303030;
+    color: #ffffff;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Header */
 header {
     background-color: #303030;
     padding: 16px;
@@ -20,7 +26,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box;
 }
 
 header h1 {
@@ -34,46 +39,43 @@ header #logo {
     order: -1;
 }
 
+/* Navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style: none;
     display: flex;
-    font-size: 20px;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-}
-
-nav ul li {
-    margin-left: 16px;
+    font-size: 20px;
 }
 
 nav ul li a {
+    background: linear-gradient(45deg, #308730, #56c456);
     color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
-.header-spacer {
-    height: px;
+nav ul li a:hover {
+    background: linear-gradient(45deg, #56c456, #308730);
+    color: #303030;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Hero Section */
 #hero {
-    background-image: url('../images/grid.jpg');
-    background-size: 300px 300px;
-    background-repeat: repeat;
-    background-position: top left;
+    background: url('../images/grid.jpg') top left / 300px 300px repeat;
     height: 830px;
     display: grid;
     position: relative;
     overflow: hidden;
-    box-sizing: border-box;
     margin-top: 90px;
-}
-
-#hero div {
-    width: 70%; 
-    height: 300px;
 }
 
 #hero .hero-content {
@@ -85,29 +87,8 @@ nav ul li a {
     left: 15%;
     right: 15%;
     width: 70%;
-    height: 40%;
+    height: 45%;
     z-index: 10;
-}
-
-#hero .falling-piece {
-    position: absolute;
-    top: -50px;
-    width: 200px;
-    height: auto;
-    pointer-events: none;
-    animation: fall linear;
-    animation-duration: 5s;
-    transform-origin: center;
-    z-index: 1;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
 }
 
 #hero h2 {
@@ -121,14 +102,46 @@ nav ul li a {
 }
 
 #hero a {
-    background-color: #308730 ;
-    color: #ffffff;
-    font-size: 30px;
-    padding: 12px 27px;
-    text-decoration: none;
+    font-size: 24px;
+    padding: 15px 30px;
     border-radius: 10px;
+    background: linear-gradient(45deg, #308730, #56c456);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
+#hero a:hover {
+    background: linear-gradient(45deg, #56c456, #308730);
+    color: #303030;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Falling Animation */
+#hero .falling-piece {
+    position: absolute;
+    top: -200px;
+    width: 200px;
+    pointer-events: none;
+    animation: fall 10s linear infinite;
+    transform-origin: center;
+    z-index: 1;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Sections */
 section {
     padding: 50px 20px;
     text-align: center;
@@ -152,41 +165,47 @@ section p {
 
 section a.btn {
     display: inline-block;
+    background: linear-gradient(45deg, #308730, #56c456);
     color: #ffffff;
-    font-size: 18px;
     padding: 10px 20px;
-    text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+section a.btn:hover {
+    background: linear-gradient(45deg, #56c456, #308730);
+    color: #303030;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Images */
+#home, #about, #download {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #home {
     background-image: url("https://media.tenor.com/b4_NHV0bA-kAAAAe/sus-among-us.png");
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #about {
     background-image: url("https://media.tenor.com/FnQS6TtmU-EAAAAM/among-us-sus.gif");
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #download {
     background-image: url("https://i.imgflip.com/6tacwp.jpg");
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
+/* Footer */
 footer {
     background-color: #202020;
     padding: 20px;
@@ -200,7 +219,13 @@ footer p {
     color: #a0a0a0;
 }
 
-#logo {
-    height: 50px;
-    width: auto;
+footer a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+footer a:hover {
+    transform: scale(1.1);
 }
