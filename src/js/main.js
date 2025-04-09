@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
         piece.style.animationDuration = Math.random() * 3 + 2 + "s";
         const horizontalMovement = Math.random() * 200 - 100;
         piece.style.setProperty("--horizontal-movement", `${horizontalMovement}px`);
+
+        // Set random rotation direction (-1 for clockwise, 1 for counterclockwise)
+        const rotationDirection = Math.random() < 0.5 ? -1 : 1;
+        piece.style.setProperty("--rotation-direction", rotationDirection);
+
         piece.style.transform = `rotate(${Math.random() * 360}deg)`;
         heroSection.appendChild(piece);
 

@@ -127,9 +127,9 @@ nav ul li a:hover {
     top: -200px;
     width: 200px;
     pointer-events: none;
-    animation: fall 10s linear infinite;
+    animation: fall 7s linear forwards;
     transform-origin: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 @keyframes fall {
@@ -137,7 +137,7 @@ nav ul li a:hover {
         transform: translateY(0) rotate(0deg);
     }
     100% {
-        transform: translateY(100vh) rotate(360deg);
+        transform: translateY(200vh) rotate(calc(var(--rotation-direction, 1) * 360deg));
     }
 }
 
@@ -194,20 +194,20 @@ section a.btn:hover {
 }
 
 #home {
-    background-image: url("https://media.tenor.com/b4_NHV0bA-kAAAAe/sus-among-us.png");
+    background-color: grey;
 }
 
 #about {
-    background-image: url("https://media.tenor.com/FnQS6TtmU-EAAAAM/among-us-sus.gif");
+    background-color: #303030;
 }
 
 #download {
-    background-image: url("https://i.imgflip.com/6tacwp.jpg");
+    background-color: #202020;
 }
 
 /* Footer */
 footer {
-    background-color: #202020;
+    background-color: #111111;
     padding: 20px;
     text-align: center;
     color: #ffffff;
