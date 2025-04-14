@@ -1,6 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const heroSection = document.getElementById("hero");
-    const chessPieces = ["pawn.png", "knight.png", "bishop.png", "rook.png", "queen.png", "king.png", "bpawn.png", "bknight.png", "bbishop.png", "brook.png", "bqueen.png", "bking.png"];
+    const chessPieces = [
+        "pawn.gif", 
+        "knight.gif", 
+        "bishop.gif", 
+        "rook.gif", 
+        "queen.gif", 
+        "king.gif", 
+        "b_pawn.gif", 
+        "b_knight.gif", 
+        "b_bishop.gif", 
+        "b_rook.gif", 
+        "b_queen.gif", 
+        "b_king.gif",
+        "r_king.gif",
+        "r_queen.gif"
+    ];
 
     function createFallingPiece() {
         const piece = document.createElement("img");
