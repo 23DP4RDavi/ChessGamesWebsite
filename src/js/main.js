@@ -19,11 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createFallingPiece() {
         const piece = document.createElement("img");
-        piece.src = `src/images/pieces/${chessPieces[Math.floor(Math.random() * chessPieces.length)]}`;
+        const selectedPiece = chessPieces[Math.floor(Math.random() * chessPieces.length)];
+
+        // Make r_ pieces rarer
+        if (selectedPiece.startsWith("r_") && Math.random() > 0.3) {
+            return; // Skip creating this piece most of the time
+        }
+
+        piece.src = `src/images/pieces/${selectedPiece}`;
         piece.classList.add("falling-piece");
 
         piece.style.left = Math.random() * 100 + "vw";
-        piece.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+        // Make r_ pieces fall faster
+        const isRarePiece = selectedPiece.startsWith("r_");
+        piece.style.animationDuration = isRarePiece
+            ? Math.random() * 0.5 + 1 + "s" // Faster fall for r_ pieces
+            : Math.random() * 3 + 2 + "s"; // Normal fall for other pieces
+
         const horizontalMovement = Math.random() * 200 - 100;
         piece.style.setProperty("--horizontal-movement", `${horizontalMovement}px`);
 
