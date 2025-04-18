@@ -194,11 +194,36 @@ section a.btn:hover {
 }
 
 #home {
-    background-color: grey;
+    background-color: #202020;
 }
 
 #about {
-    background-color: #303030;
+    position: relative;
+    background: url('../images/checkers.gif') center center / contain no-repeat;
+    background-color: #303030; /* Fallback color */
+    min-height: 500px;
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+#about h2,
+#about p,
+#about a {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
 }
 
 #download {
