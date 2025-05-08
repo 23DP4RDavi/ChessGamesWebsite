@@ -61,13 +61,6 @@ nav ul li a {
     transition: transform 0.3s;
 }
 
-nav ul li a:hover {
-    background: linear-gradient(45deg, #56c456, #308730);
-    color: #303030;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-}
-
 /* Hero Section */
 #hero {
     background: url('../images/grid.jpg') top left / 300px 300px repeat;
@@ -114,13 +107,6 @@ nav ul li a:hover {
     transition: transform 0.3s;
 }
 
-#hero a:hover {
-    background: linear-gradient(45deg, #56c456, #308730);
-    color: #303030;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-}
-
 /* Falling Animation */
 #hero .falling-piece {
     position: absolute;
@@ -145,13 +131,11 @@ nav ul li a:hover {
 section {
     padding: 50px 20px;
     text-align: center;
-    color: #ffffff;
 }
 
 section h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #f0f0f0;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -160,13 +144,12 @@ section p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #d0d0d0;
 }
 
 section a.btn {
     display: inline-block;
-    background: linear-gradient(45deg, #308730, #56c456);
     color: #ffffff;
+    background: linear-gradient(45deg, #308730, #56c456);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -175,22 +158,6 @@ section a.btn {
     text-align: center;
     transition: transform 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-section a.btn:hover {
-    background: linear-gradient(45deg, #56c456, #308730);
-    color: #303030;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Background Images */
-#home, #about, #download {
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #home {
@@ -233,7 +200,6 @@ section a.btn:hover {
     min-height: 500px;
     padding: 50px 20px;
     text-align: center;
-    color: #ffffff;
     overflow: hidden;
 }
 
@@ -256,21 +222,42 @@ section a.btn:hover {
 }
 
 #download {
-    background-color: #202020;
+    background-color: #212121;
+    text-align: center;
+}
+
+#download h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+#download p {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+#download ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+}
+
+#download ul li {
+    background: rgba(68, 70, 68, 0.1);
+    margin: 8px 0;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-size: 18px;;
 }
 
 #features {
-    border-radius: 16px;
-    margin: 40px auto;
-    max-width: 700px;
-    padding: 40px 30px 30px 30px;
+    background-color: #2B2B2B;
 }
 
 #features h2 {
     font-size: 36px;
-    margin-bottom: 28px;
     letter-spacing: 2px;
-    text-shadow: 0 2px 8px #222c22;
 }
 
 #features ul {
@@ -286,7 +273,6 @@ section a.btn:hover {
     padding: 18px 24px;
     border-radius: 8px;
     font-size: 20px;
-    color: #e8ffe8;
     box-shadow: 0 2px 8px rgba(48, 135, 48, 0.10);
     display: flex;
     align-items: center;
@@ -305,17 +291,13 @@ section a.btn:hover {
 }
 
 #getting-started {
-    border-radius: 16px;
-    margin: 40px auto;
-    max-width: 700px;
-    padding: 40px 30px 30px 30px;
+    background-color: #262626;
 }
 
 #getting-started h2 {
     font-size: 34px;
     margin-bottom: 22px;
     letter-spacing: 2px;
-    text-shadow: 0 2px 8px #222c22;
 }
 
 #getting-started h3 {
@@ -323,7 +305,7 @@ section a.btn:hover {
     margin-top: 18px;
     margin-bottom: 10px;
     letter-spacing: 1px;
-    text-align: left;
+    text-align: middle;
 }
 
 #getting-started ul,
@@ -385,6 +367,16 @@ footer a {
 
 footer a:hover {
     transform: scale(1.1);
+}
+
+/* Consistent button hover animation for all buttons */
+nav ul li a:hover,
+section a.btn:hover,
+#hero a:hover {
+    background: linear-gradient(45deg, #56c456, #308730);
+    color: #303030;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Styles */
