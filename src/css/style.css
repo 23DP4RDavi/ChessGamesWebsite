@@ -19,7 +19,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: 16px;
     position: fixed;
     top: 0;
@@ -46,10 +45,13 @@ nav ul {
     justify-content: center;
     gap: 16px;
     font-size: 20px;
+    flex-wrap: nowrap;           /* Prevent wrapping */
+    overflow-x: auto;            /* Allow horizontal scroll if needed */
+    white-space: nowrap;         /* Prevent text wrapping */
+    scrollbar-width: none;       /* Hide scrollbar in Firefox */
 }
 
 nav ul li a {
-    background: linear-gradient(45deg, #308730, #56c456);
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -407,12 +409,13 @@ section a.btn:hover,
         padding: 10px;
     }
     nav ul {
-        flex-direction: row;
         gap: 8px;
         width: 100%;
+        flex-wrap: nowrap;       /* Ensure no wrapping on mobile */
+        overflow-x: auto;
+        white-space: nowrap;
     }
     nav ul li a {
-        width: 100%;
         font-size: 12px;
         padding: 8px 8px;
     }
