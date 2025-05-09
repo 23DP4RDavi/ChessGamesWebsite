@@ -399,93 +399,63 @@ section a.btn:hover,
     }
 }
 
+/* Extra mobile responsiveness */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
-        gap: 8px;
     }
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
         width: 100%;
-        align-items: flex-start;
     }
     nav ul li a {
         width: 100%;
-        box-sizing: border-box;
         font-size: 16px;
-        padding: 8px 12px;
-    }
-    #logo {
-        height: 40px;
+        padding: 8px 8px;
     }
     #hero {
-        height: 320px;
+        height: auto;
+        min-height: 350px;
         margin-top: 70px;
+        padding: 0;
     }
     #hero .hero-content {
-        top: 10%;
-        left: 2%;
-        right: 2%;
-        width: 96%;
-        padding: 12px 4px;
+        position: static;
+        width: 98%;
+        height: auto;
+        margin: 100px auto;
+        padding: 16px 4px;
     }
     #hero h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
-    #hero p {
-        font-size: 14px;
-    }
-    #hero a {
-        font-size: 16px;
-        padding: 8px 16px;
+    #hero p, section p, #download p {
+        font-size: 15px;
     }
     section {
         padding: 24px 4px;
     }
-    section h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    #features,
-    #getting-started {
-        padding: 16px 2vw 12px 2vw;
+    #home, #features, #getting-started, #about {
         max-width: 100vw;
-        margin: 18px auto;
+        padding: 24px 4px;
     }
-    #features h2,
-    #getting-started h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    #features ul li,
-    #getting-started ul li,
-    #getting-started ol li {
-        font-size: 14px;
+    #features ul li, #download ul li {
+        font-size: 15px;
         padding: 10px 8px;
     }
-    #features ul {
-        max-width: 98vw;
-    }
-    #getting-started ul,
-    #getting-started ol {
-        max-width: 98vw;
-        padding: 10px 8px;
-        font-size: 14px;
-    }
-    #about,
-    #home,
-    #download {
-        min-height: 250px;
-        padding: 18px 2vw;
+    #about {
+        min-height: 300px;
+        background-size: cover;
     }
     footer {
         font-size: 12px;
         padding: 10px;
     }
-    .social-media img {
-        width: 60px !important;
+    footer img {
+        width: 60px;
     }
 }
+
